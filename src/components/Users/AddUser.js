@@ -1,4 +1,6 @@
 import React from "react";
+import Card from "../UI/Card";
+import styles from "./AddUser.module.css"
 
 const AddUser = () => {
 
@@ -8,6 +10,7 @@ const AddUser = () => {
     }
 
     return (
+        <Card className={styles.input}>
         <form onSubmit={addUserHandler}>
             <label htmlFor="username">User Name?</label>
             <input id="username" type="text" />
@@ -15,6 +18,7 @@ const AddUser = () => {
             <input id="age" type="number" />
             <button type="submit">Add Info</button>
         </form>
+        </Card>
     )
 }
 

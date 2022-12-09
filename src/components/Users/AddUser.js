@@ -3,7 +3,7 @@ import Button from "../UI/Button";
 import Card from "../UI/Card";
 import styles from "./AddUser.module.css"
 
-const AddUser = () => {
+const AddUser = props => {
 
     const [userName, setUserName] = useState('')
     const [userAge, setUserAge] = useState('')
@@ -20,6 +20,7 @@ const AddUser = () => {
         }
 
         console.log(`name:${userName} age:${userAge}`)
+        props.addUserData(userName, userAge)
 
         setUserAge('')
         setUserName('')

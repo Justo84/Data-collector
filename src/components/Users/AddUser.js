@@ -20,7 +20,7 @@ const AddUser = props => {
         }
 
         console.log(`name:${userName} age:${userAge}`)
-        props.addUserData(userName, userAge)
+        props.onAddUser(userName, userAge)
 
         setUserAge('')
         setUserName('')

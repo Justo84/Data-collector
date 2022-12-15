@@ -11,11 +11,16 @@ function App() {
       [...prevList, {name : username, age : userage, id : Math.random().toString() }]
       )
   }
+
+  const userDeleteHandler = (userId) => {
+    setUsersList(prevList =>
+      prevList.filter(user => user.userId !== userId))
+  }
   
   return (
     <div>
       <AddUser onAddUser={userDataHandler} />
-      {!usersList.length < 1 && <UserList userList={usersList} />}
+      {!usersList.length < 1 && <UserList userList={usersList} deleteUser={userDeleteHandler} />}
     </div>
   );
 }

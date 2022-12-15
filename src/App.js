@@ -14,7 +14,7 @@ function App() {
 
   const userDeleteHandler = (userId) => {
     setUsersList(prevList =>
-      prevList.filter(user => user.userId !== userId))
+      prevList.filter(user => user.id !== userId))
   }
   
   return (

@@ -18,10 +18,10 @@ function App() {
   }
   
   return (
-    <div>
+    <>
       <AddUser onAddUser={userDataHandler} />
       {!usersList.length < 1 && <UserList userList={usersList} deleteUser={userDeleteHandler} />}
-    </div>
+    </>
   );
 }
 
